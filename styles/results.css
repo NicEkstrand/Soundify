@@ -1,0 +1,53 @@
+/* MacBook Pro 16" - 2 */
+body{
+    position: relative;
+    width: 1728px;
+    height: 1117px;
+    
+    background: linear-gradient(180deg, #9D0E64 0%, #000000 79.59%);
+}
+
+
+/* Rectangle 3 */
+.title-box{
+    position: absolute;
+    width: 449px;
+    height: 112px;
+    left: 639px;
+    top: 29px;
+    
+    background: #000000;
+    border-radius: 90px;
+    
+    
+}
+
+/* RESULTS */
+.results-title{
+    position: absolute;
+    width: 223px;
+    height: 61px;
+    left: 752px;
+    top: 55px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    /* identical to box height */
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+}
+
+
+/* Ellipse 1 */
+.back-button{
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    left: 19px;
+    top: 14px;
+}

@@ -1,0 +1,70 @@
+/* MacBook Pro 16" - 1 */
+body{
+    position: relative;
+    width: 1728px;
+    height: 1117px;
+    
+    background: linear-gradient(180deg, #9D0E64 0%, #000000 79.59%);
+}
+
+
+
+/* Rectangle 1 */
+.outer-search-box{
+    position: absolute;
+    width: 696px;
+    height: 514px;
+    left: 516px;
+    top: 193px;
+    
+    background: #000000;
+    border-radius: 90px;
+}
+
+
+
+/* ENTER A SONG */
+.enter-song{
+    position: absolute;
+    width: 372px;
+    height: 61px;
+    left: 678px;
+    top: 255px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    /* identical to box height */
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+
+
+
+/* Rectangle 2 */
+.inner-search-box{
+    position: absolute;
+    width: 558px;
+    height: 274px;
+    left: 585px;
+    top: 367px;
+    
+    background: #FFFFFF;
+    border-radius: 90px;    
+}
+
+
+
+/* Ellipse 1 */
+.back-button{
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    left: 19px;
+    top: 14px;
+}
+

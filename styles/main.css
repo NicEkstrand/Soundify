@@ -1,0 +1,107 @@
+/* Home */
+
+.center{
+    /* Rectangle 1 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 65vw;
+    height: 1118px;
+    left: 284px;
+    top: 0px;
+
+    background: linear-gradient(360deg, #0B0C0C 72.27%, rgba(39, 185, 185) 144.98%);
+}
+
+.recent-searches{
+    align-content: center;
+    height: 61px;
+    top: 44px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 61px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+
+
+/* Side Bar */
+.side-bar{
+    position: absolute;
+    width: 16vw;
+    height: 1117px;
+    left: 0px;
+    top: 0px;
+    
+    background: linear-gradient(0deg, #000000, #000000), linear-gradient(0deg, #000000, #000000), #000000;    
+}
+
+/* Search */
+.options{
+    position: absolute;
+    width: 280px;
+    height: 70px;
+    left: 4px;
+    top: 253px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+.options a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Logo */
+img{
+    position: absolute;
+    top: 50px;
+    left: 80px;
+}
+
+
+/* Friend Activity */
+.friend-activity-box{
+    position: absolute;
+    width: 23vw;
+    height: 1117px;
+    left: 80vw;
+    top: 0px;
+    
+    background: linear-gradient(0deg, #000000, #000000), linear-gradient(0deg, #000000, #000000), #000000;
+}
+
+
+
+
+.friend-activity-text{
+    position: absolute;
+    width: 194px;
+    height: 37px;
+    left: 16px;
+    top: 16px;
+    
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    
+    color: #FFFFFF;    
+}
+

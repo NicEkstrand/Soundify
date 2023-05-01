@@ -1,0 +1,111 @@
+/* MacBook Pro 16" - 2 */
+body{
+    position: relative;
+    background-size: 100% auto;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    background-image: url(../images/Signup-background.png);
+}
+
+/* Rectangle 11 */
+.Sign-up-box{
+    position: absolute;
+    width: 709px;
+    height: 436px;
+    left: 509px;
+    top: 250px;
+    
+    background: #000000;
+    border-radius: 90px;
+}
+
+
+
+/* Sign In */
+.sign-in{
+    position: absolute;
+    width: 159px;
+    height: 61px;
+    left: 780px;
+    top: 302px;
+    
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+/* Rectangle 25 */
+.username-box{
+    position: absolute;
+    width: 578px;
+    height: 50px;
+    left: 576px;
+    top: 420px;
+    
+    background: #D9D9D9;
+    border-radius: 90px;
+    
+}
+
+
+/* Username */
+.username{
+    position: absolute;
+    width: 144px;
+    height: 37px;
+    left: 597px;
+    top: 428px;
+    
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+    /* identical to box height */
+    text-align: center;
+    
+    color: #645E5E;
+}
+
+/* Rectangle 26 */
+.password-box{
+    position: absolute;
+    width: 578px;
+    height: 50px;
+    left: 576px;
+    top: 516px;
+    
+    background: #D9D9D9;
+    border-radius: 90px;
+}
+
+
+
+/* Password */
+.password{
+    position: absolute;
+    width: 132px;
+    height: 37px;
+    left: 597px;
+    top: 524px;
+    
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+    /* identical to box height */
+    text-align: center;
+    
+    color: #645E5E;
+}
+
+
