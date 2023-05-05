@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <link rel="stylesheet" type="text/css" href="../styles/results.css">
+         <link rel="stylesheet" type="text/css" href="/static/styles/results.css">
          <title>Soundify</title>
     </head>
     <body>
-        <div class="title-box"></div>
-        <div class="results-title">RESULTS</div>
-        <div class="back-button">
-            <img src="../images/back-button.png">
+        <div class="title-area">
+            <div class="title-box">
+                <div class="results-title">RESULTS</div>
+            </div>
         </div>
-
-
-
-        
-
-       
+        <div class="back-button">
+            <a href="/search"><img src="/static/images/back-button.png"></a>
+        </div>
+        <div class="song-area">
+            <div class="line">
+                {%for i in range(0, 10)%}
+                    <div class="song">
+                        <a href="{{results[i].getUri()}}">{{results[i]}}</a>
+                    </div>
+                {%endfor%}
+            </div>
+            <div class="line">
+                {%for i in range(10,20)%}
+                    <div class="song">
+                        <a href="{{results[i].getUri()}}">{{results[i]}}</a>
+                    </div>
+                {%endfor%}
+            </div>
+        </div>
     </body>
 </html>

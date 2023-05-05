@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <link rel="stylesheet" type="text/css" href="../styles/search.css">
+         <link rel="stylesheet" type="text/css" href="/static/styles/search.css">
          <title>Soundify</title>
     </head>
     <body>
         <div class="outer-search-box"></div>
-        <div class="inner-search-box"></div>
+        <div class="inner-search-box">
+            <form action="/results" method="POST">
+                <div class="input-field">
+                    <input type ="text" id = "song" name="song-title">
+                </div>
+            </form>
+        </div>
         <div class="enter-song">SEARCH SONG</div>
         <div class="back-button">
-            <img src="../images/back-button.png">
+            <a href="/home"><img src="/static/images/back-button.png"></a>
         </div>
     </body>
 </html>

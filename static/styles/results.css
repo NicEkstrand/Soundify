@@ -7,14 +7,18 @@ body{
     background: linear-gradient(180deg, #9D0E64 0%, #000000 79.59%);
 }
 
-
+.title-area{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
 /* Rectangle 3 */
 .title-box{
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 449px;
     height: 112px;
-    left: 639px;
-    top: 29px;
     
     background: #000000;
     border-radius: 90px;
@@ -24,11 +28,8 @@ body{
 
 /* RESULTS */
 .results-title{
-    position: absolute;
     width: 223px;
     height: 61px;
-    left: 752px;
-    top: 55px;
     
     font-family: 'Inter';
     font-style: normal;
@@ -39,15 +40,35 @@ body{
     text-align: center;
     
     color: #FFFFFF;
-    
 }
 
-
-/* Ellipse 1 */
 .back-button{
     position: absolute;
     width: 65px;
     height: 65px;
     left: 19px;
     top: 14px;
+}
+
+.song-area{
+    width: 96vw;
+    height: 96vh;
+    display: flex;
+    justify-content: center;
+}
+.line{
+    width: 40vw;
+    height: 70vh;
+    background: #ffffff;
+    margin: 10px;
+
+}
+
+.song{
+    margin: 23px;
+}
+
+.song a{
+    text-decoration: none;
+    color: #000000;
 }

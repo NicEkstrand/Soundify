@@ -19,7 +19,7 @@ from tkinter import *
 
 #Spotify data
 cid = '294cd5ae40994904ba97d1a47b7c92b7'
-secret = '2741e8fef8b74fb8b7eaad8186d7dc70'
+secret = '93a9ea99b9f341da8b09b961e33ada94'
 Oauth_token = 'BQD3GhMTvsm2iVlW4uq0vyxrYenWJJbwplKPmZblr5kYh5RA4MwLKOF3NLe4HmBaQofS1aEE7OcS8mnXhn21PRWuqzcrAqeoOivHYMlBeonNtBvTcbuI0xCc5xJXU7MscPXFRosL7Ylng04V8ig_6wJwjA'
 client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secret=secret)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
@@ -38,19 +38,8 @@ recommendResults = Playlist([])
 queueLabels = []
 
 #Text entries and labels
-lbl = Label(window, text="Search for something")
-lbl.grid(column=0, row=0)
-queue = Label(window, text="Current Queue:")
-queue.grid(column=8,row=0)
-
-searchInput = Entry(window,width=10)
-searchInput.grid(column=1, row=0)
-
 recommend = Entry(window, width=10)
 recommend.grid(column=5,row=0)
-
-searchInQueueInput = Entry(window, width=10)
-searchInQueueInput.place(x=120,y=550)
 
 #The two functions that set the queue in specified order
 def shuffle():
@@ -138,13 +127,12 @@ def callback(url):
    webbrowser.open_new_tab(url)
 
 #Returns a list of songs when search bar is used
-def search():
-    clearWindow(searchResults.songs)
-    results = sp.search(q=searchInput.get())
+def search(input):
+    songs = []
+    results = sp.search(q=input.get())
     #Sets the playlist data to search results
     for idx, track in enumerate(results['tracks']['items']):
-        searchResults.songs.append(convertResults(track))
-    printText(searchResults, searchX, searchY)
+        songs.append(convertResults(track))
 
 #Buttons
 playShuffled = Button(window, text="Play Shuffled", command=shuffle)
@@ -153,12 +141,7 @@ playShuffled.grid(column=6, row=0)
 playInOrder = Button(window, text="Play in order", command=inOrder)
 playInOrder.grid(column=7,row=0)
 
-searchInQueue = Button(window, text="search in queue", command=searchInQueue)
-searchInQueue.place(x=10,y=550)
-
 getRecommendedPlaylist = Button(window, text="get recommended playlist", command=recomendPlaylist)
 getRecommendedPlaylist.grid(column=4, row=0)
 
-searchButton = Button(window, text="Search", command=search)
-searchButton.grid(column=2, row=0)
 window.mainloop()

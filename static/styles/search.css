@@ -48,6 +48,9 @@ body{
 /* Rectangle 2 */
 .inner-search-box{
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 558px;
     height: 274px;
     left: 585px;
@@ -57,14 +60,13 @@ body{
     border-radius: 90px;    
 }
 
-
-
-/* Ellipse 1 */
-.back-button{
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    left: 19px;
-    top: 14px;
+.input-field input[type="text"]{
+    text-align: center;
+    height: 274px;
+    width: 500px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 30px;
 }
 

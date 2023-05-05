@@ -6,6 +6,11 @@ body{
     background: linear-gradient(180deg, #1FA344 0%, rgba(0, 0, 0) 62.22%);
 }
 
+.title-area{
+    display: flex;
+    justify-content: center;
+}
+
 /* Title */
 .title-box{
     display: flex;
@@ -49,5 +54,13 @@ body{
     
     background: #000000;
     border-radius: 90px;
+}
+
+.back-button{
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    left: 19px;
+    top: 14px;
 }
 
