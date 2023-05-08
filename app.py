@@ -44,9 +44,21 @@ app.secret_key = "Change Me"
 
 # TODO: Fill in methods and routes
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def sign_in():
-    return render_template("sign-in.html")
+    if request.method == "GET":
+        return render_template("sign-in.html")
+    else:
+         #For Sign in
+        username = request.form["username"]
+        password = request.form["password"]
+        #Matches inputs with users database
+        target = db_session.query(User).where(User.username == username and User.password == password).first()
+        if target != None:
+            return redirect(url_for("home"))
+        else:
+            return redirect(url_for("sign_in"))
+
 
 @app.route("/history")
 def history():
@@ -62,42 +74,27 @@ def settings():
 
 @app.route("/home", methods=["GET", "POST"])
 def home():
-    #For Sign in
-    username = request.form["sign-in-username"]
-    password = request.form["sign-in-password"]
-    #Matches inputs with users database
-    target = db_session.query(User).where(User.username == username and User.password == password).first()
-    if target != None:
-        return render_template("home.html")
-    else:
-        return render_template("sign-in.html")
-    
-    #For Sign up
-    username = request.form["sign-up-username"]
-    password = request.form["sign-up-password"]
-    person = User(username, password)
-    db_session.add(person)
-    db_session.commit()
     return render_template("home.html")
     
-    
-
 @app.route("/results", methods=["POST"])
 def results():
     song_title = request.form["song-title"]
     songs = recomendPlaylist(song_title)
     return render_template("results.html", results = songs)
                         
-@app.route("/sign-up")
+@app.route("/sign-up", methods=["GET", "POST"])
 def sign_up():
-    return render_template("sign-up.html")
+    if request.method == "GET":
+        return render_template("sign-up.html")
+    else:
+        person = User(username = request.form["username"], password = request.form["password"])
+        db_session.add(person)
+        db_session.commit()
+        return redirect(url_for("home"))
+
     
 
-
-@app.before_first_request
-def setup():
-    init_db()
-
 if __name__ == "__main__":
+    init_db()
     app.run(debug=True)
 

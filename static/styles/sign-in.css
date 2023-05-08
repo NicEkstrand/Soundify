@@ -60,23 +60,22 @@ body{
     color: #645E5E;
 }
 
-/* Rectangle 26 */
-.box{
-    width: 578px;
-    height: 50px;
-    top: 400px;
-    margin: 20px;
-    
-    background: #ffffff;
-    border-radius: 90px;
-}
-
 .input-field input[type="text"]{
     text-align: center;
     height: 50px;
     width: 578px;
-    background: transparent;
-    border: none;
+    margin: 10px;
+
+    box-shadow: none;
+    font-size: 30px;
+}
+
+.input-field input[type="password"]{
+    text-align: center;
+    height: 50px;
+    width: 578px;
+    margin: 10px;
+    
     box-shadow: none;
     font-size: 30px;
 }

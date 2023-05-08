@@ -22,7 +22,7 @@ db_logger.setLevel(db_logger_log_level)
 
 # Creates the engine to connect with our database
 # TODO: Change the name from "vet" to something relevant
-engine = create_engine("sqlite:///vet.db", echo=False)
+engine = create_engine("sqlite:///soundify.db", echo=False)
 
 # A Scoped Session helps us when creating our apps
 db_session = scoped_session(sessionmaker(autocommit=False,

@@ -11,7 +11,7 @@ import webbrowser
 import spotipy
 
 # TODO: Complete your models
-class User:
+class User(Base):
     __tablename__ = "users"
     # Columns
     username = Column("username", TEXT, primary_key=True)
@@ -34,7 +34,7 @@ class User:
 
     
 
-class Follower:
+class Follower(Base):
     __tablename__ = "followers"
 
     # Columns
@@ -43,7 +43,7 @@ class Follower:
     following_id = Column('following_id', TEXT, ForeignKey('users.username'))
     
 
-class Search:
+class Search(Base):
     __tablename__ = "searches"
     # Columns
     id = id = Column("id", INTEGER, primary_key=True)
