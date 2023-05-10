@@ -16,8 +16,8 @@ body{
 .Sign-in-box{
     display: flex;
     justify-content: center;
-    width: 709px;
-    height: 436px;
+    width: 40vw;
+    height: 45vh;
     
     background: #000000;
     border-radius: 90px;
@@ -28,14 +28,14 @@ body{
 
 
 /* Sign In */
-.sign-in{
-    width: 190px;
-    height: 61px;
+.block-title{
+    width: 20vw;
+    height: 7vh;
     
     font-family: 'Ruda';
     font-style: normal;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 3vw;
     line-height: 61px;
     /* identical to box height */
     text-align: center;
@@ -44,26 +44,10 @@ body{
 }
 
 
-/* Username */
-.box-text{
-    width: 144px;
-    height: 37px;
-    
-    font-family: 'Ruda';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 37px;
-    /* identical to box height */
-    text-align: center;
-    
-    color: #645E5E;
-}
-
 .input-field input[type="text"]{
     text-align: center;
-    height: 50px;
-    width: 578px;
+    height: 5vh;
+    width: 32vw;
     margin: 10px;
 
     box-shadow: none;
@@ -72,8 +56,8 @@ body{
 
 .input-field input[type="password"]{
     text-align: center;
-    height: 50px;
-    width: 578px;
+    height: 5vh;
+    width: 32vw;
     margin: 10px;
     
     box-shadow: none;

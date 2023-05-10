@@ -1,38 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-         <link rel="stylesheet" type="text/css" href="/static/styles/sign-in.css">
-         <title>Soundify</title>
-    </head>
-    <body>
-        <div class="Sign-in-box">
-            <div class="row">
-                <div class="sign-in">
-                    Sign Up
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="box">
-                    <form action="/sign-up" method="POST">
-                        <div class="input-field">
-                            <input type ="text" id = "username" name="username">
-                        </div>
-                   
-                        <div class="input-field">
-                            <input type ="password" id = "password" name="password">
-                        </div>
-                        <button type = "submit">Submit</button>
-                    </form>
-                </div>
-            </div>
+{%extends "sign-base.html"%}
+{%block title%}Sign Up{%endblock%}
+{%block sign%}Sign Up{%endblock%}
 
-            <div class="row">
-                <a href="/">Sign In</a>
-            </div>
-
-            
-        </div>
-        
-    </body>
-</html>
+{%block button%}
+<div class="row">
+    <a href="/">Sign In</a>
+</div>
+{%endblock%}

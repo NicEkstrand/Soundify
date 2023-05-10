@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <link rel="stylesheet" type="text/css" href="/static/styles/main.css">
+         <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/home.css')}}">
          <title>Soundify</title>
     </head>
     <body>
-        <div class="center">
-            <div class="recent-searches">Recent Searches</div>
-            
-            
-            
-        </div>
-        
         <div class="side-bar">
             <img src="/static/images/logo.png">
             <div class="options">
@@ -20,6 +13,14 @@
                 <a href="/settings">Settings</a>
             </div>
         </div>
+        <div class="center">
+            <div class="recent-searches">Recent Searches</div>
+            
+            
+            
+        </div>
+        
+        
         <div class="friend-activity-box">
             <div class="friend-activity-text">Friend Activity</div>
         </div>

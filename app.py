@@ -92,5 +92,5 @@ def sign_up():
 
 if __name__ == "__main__":
     init_db()
-    app.run(debug=True)
+    app.run(host="172.16.6.244", port="5001")
 

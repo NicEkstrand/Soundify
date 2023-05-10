@@ -49,7 +49,6 @@ class Search(Base):
     __tablename__ = "searches"
     # Columns
     id = id = Column("id", INTEGER, primary_key=True)
-    user_id = Column('user_id', TEXT, ForeignKey('users.username'))
     input = Column("input", TEXT, nullable=False)
     user = relationship("User", back_populates="searches")
     

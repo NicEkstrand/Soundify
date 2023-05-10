@@ -1,13 +1,15 @@
 /* Home */
+body{
+    display: flex;
+    margin: 0px;
+}
 
 .center{
     /* Rectangle 1 */
-
     box-sizing: border-box;
 
-    position: absolute;
     width: 65vw;
-    height: 1118px;
+    height: 100vh;
     left: 284px;
     top: 0px;
 
@@ -34,9 +36,11 @@
 
 /* Side Bar */
 .side-bar{
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 16vw;
-    height: 1117px;
+    height: 100vh;
     left: 0px;
     top: 0px;
     
@@ -45,16 +49,16 @@
 
 /* Search */
 .options{
-    position: absolute;
-    width: 280px;
-    height: 70px;
+    justify-content: center;
+    width: 10vw;
+    height: auto;
     left: 4px;
     top: 253px;
     
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 50px;
+    font-size: 3vw;
     line-height: 61px;
     text-align: center;
     
@@ -69,36 +73,30 @@
 /* Logo */
 img{
     position: absolute;
-    top: 50px;
-    left: 80px;
+    top: 2vh;
+    left: 3vw;
+    width: 10vw;
 }
 
 
 /* Friend Activity */
 .friend-activity-box{
-    position: absolute;
     width: 23vw;
-    height: 1117px;
+    height: 100vh;
     left: 80vw;
     top: 0px;
     
     background: linear-gradient(0deg, #000000, #000000), linear-gradient(0deg, #000000, #000000), #000000;
 }
 
-
-
-
 .friend-activity-text{
-    position: absolute;
-    width: 194px;
-    height: 37px;
-    left: 16px;
-    top: 16px;
+    width: auto;
+    height: auto;
     
     font-family: 'Ruda';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 2vw;
     line-height: 37px;
     text-align: center;
     
