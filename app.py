@@ -9,11 +9,7 @@ import webbrowser
 from tkinter import *
 
 #Spotify data
-cid = '294cd5ae40994904ba97d1a47b7c92b7'
-secret = '93a9ea99b9f341da8b09b961e33ada94'
-Oauth_token = 'BQD3GhMTvsm2iVlW4uq0vyxrYenWJJbwplKPmZblr5kYh5RA4MwLKOF3NLe4HmBaQofS1aEE7OcS8mnXhn21PRWuqzcrAqeoOivHYMlBeonNtBvTcbuI0xCc5xJXU7MscPXFRosL7Ylng04V8ig_6wJwjA'
-client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secret=secret)
-sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
+
 
 def convertResults(data):
         return Song(data["name"], data['album']['artists'][0]['name'], data['album']['name'], data['uri'],
@@ -30,7 +26,7 @@ def recomendPlaylist(input):
     listArtists.append(results['album']['artists'][0]['uri'])
     listSongs = []
     listSongs.append(givenSong.getUri())
-
+    #Gets playlist
     results = sp.recommendations(listArtists, sp.recommendation_genre_seeds(), listSongs)
     for track in results['tracks']:
         playlist.append(convertResults(track))
@@ -49,7 +45,7 @@ def sign_in():
     if request.method == "GET":
         return render_template("sign-in.html")
     else:
-         #For Sign in
+        #For Sign in
         username = request.form["username"]
         password = request.form["password"]
         #Matches inputs with users database
@@ -87,8 +83,8 @@ def sign_up():
     if request.method == "GET":
         return render_template("sign-up.html")
     else:
-        person = User(username = request.form["username"], password = request.form["password"])
-        db_session.add(person)
+        user = User(username = request.form["username"], password = request.form["password"])
+        db_session.add(user)
         db_session.commit()
         return redirect(url_for("home"))
 

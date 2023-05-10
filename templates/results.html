@@ -15,6 +15,7 @@
         </div>
         <div class="song-area">
             <div class="line">
+                <!--Prints first line of songs-->
                 {%for i in range(0, 10)%}
                     <div class="song">
                         <a href="{{results[i].getUri()}}">{{results[i]}}</a>
@@ -22,6 +23,7 @@
                 {%endfor%}
             </div>
             <div class="line">
+                <!--Prints second line of songs-->
                 {%for i in range(10,20)%}
                     <div class="song">
                         <a href="{{results[i].getUri()}}">{{results[i]}}</a>

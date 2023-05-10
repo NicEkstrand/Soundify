@@ -27,6 +27,8 @@ class User(Base):
                              primaryjoin="User.username==Follower.following_id",
                              secondaryjoin="User.username==Follower.follower_id",
                              overlaps="following")
+    
+    searches = relationship("Search", back_populates="user")
 
     def __init__(self, username, password):
         self.username = username
@@ -49,4 +51,5 @@ class Search(Base):
     id = id = Column("id", INTEGER, primary_key=True)
     user_id = Column('user_id', TEXT, ForeignKey('users.username'))
     input = Column("input", TEXT, nullable=False)
+    user = relationship("User", back_populates="searches")
     
