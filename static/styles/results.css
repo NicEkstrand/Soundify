@@ -1,8 +1,7 @@
 /* MacBook Pro 16" - 2 */
 body{
-    position: relative;
-    width: 1728px;
-    height: 1117px;
+    width: 100vw;
+    height: 100vh;
     
     background: linear-gradient(180deg, #9D0E64 0%, #000000 79.59%);
 }
@@ -12,6 +11,7 @@ body{
     justify-content: center;
     margin: 20px;
 }
+
 /* Rectangle 3 */
 .title-box{
     display: flex;
@@ -22,8 +22,6 @@ body{
     
     background: #000000;
     border-radius: 90px;
-    
-    
 }
 
 /* RESULTS */
@@ -51,7 +49,7 @@ body{
 }
 
 .song-area{
-    width: 96vw;
+    width: 100vw;
     height: 96vh;
     display: flex;
     justify-content: center;
@@ -65,7 +63,10 @@ body{
 }
 
 .song{
-    margin: 23px;
+    margin-top: 41px;
+    margin-bottom: 41px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .song a{

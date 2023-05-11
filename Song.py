@@ -12,7 +12,7 @@ class Song:
 
     def __repr__(self):
         return f'''{self.title} | {self.artist} | {self.album}
-        _____________________________________________________________________________
+
                 '''
 
     def callback(self):

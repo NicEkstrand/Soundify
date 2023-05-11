@@ -1,40 +1,53 @@
 /* MacBook Pro 16" - 1 */
 body{
-    position: relative;
-    width: 1728px;
-    height: 1117px;
+    width: 100vw;
+    height: 100vh;
     
     background: linear-gradient(180deg, #9D0E64 0%, #000000 79.59%);
 }
 
+.search-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 100vh;
+
+    top: 10vh;
+    left: 5vw;
+    
+}
 
 
 /* Rectangle 1 */
 .outer-search-box{
-    position: absolute;
-    width: 696px;
+    display: flex;
+    justify-content: center;
+    width: 37vw;
     height: 514px;
     left: 516px;
     top: 193px;
     
     background: #000000;
     border-radius: 90px;
+    flex-direction: column;
 }
 
-
+.row{
+    display: flex;
+    justify-content: center;
+}
 
 /* ENTER A SONG */
 .enter-song{
-    position: absolute;
-    width: 372px;
-    height: 61px;
-    left: 678px;
-    top: 255px;
+    width: auto;
+    height: auto;
+
     
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 3vw;
     line-height: 61px;
     /* identical to box height */
     text-align: center;
@@ -47,14 +60,11 @@ body{
 
 /* Rectangle 2 */
 .inner-search-box{
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 558px;
+    width: 30vw;
     height: 274px;
-    left: 585px;
-    top: 367px;
     
     background: #FFFFFF;
     border-radius: 90px;    
@@ -63,10 +73,15 @@ body{
 .input-field input[type="text"]{
     text-align: center;
     height: 274px;
-    width: 500px;
+    width: 30vw;
     background: transparent;
     border: none;
     box-shadow: none;
-    font-size: 30px;
+    font-size: 2vw;
 }
 
+.back-button{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}

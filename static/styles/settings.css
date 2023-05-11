@@ -1,7 +1,7 @@
 /* MacBook Pro 16" - 1 */
 body{
-    width: 1728px;
-    height: 1117px;
+    width: 100vw;
+    height: 100vh;
     
     background: linear-gradient(180deg, #1FA344 0%, rgba(0, 0, 0) 62.22%);
 }
@@ -15,6 +15,7 @@ body{
 .title-box{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 446px;
     height: 74px;
     
@@ -25,8 +26,6 @@ body{
 .title{
     width: 206px;
     height: 61px;
-    left: 761px;
-    top: 40px;
     
     font-family: 'Inter';
     font-style: normal;

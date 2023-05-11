@@ -50,6 +50,7 @@ def sign_in():
         password = request.form["password"]
         #Matches inputs with users database
         target = db_session.query(User).where(User.username == username and User.password == password).first()
+        print(target)
         if target != None:
             return redirect(url_for("home"))
         else:
@@ -88,9 +89,7 @@ def sign_up():
         db_session.commit()
         return redirect(url_for("home"))
 
-    
-
 if __name__ == "__main__":
     init_db()
-    app.run(host="172.16.6.244", port="5001")
+    app.run()
 
