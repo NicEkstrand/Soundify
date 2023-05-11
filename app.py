@@ -50,7 +50,6 @@ def sign_in():
         password = request.form["password"]
         #Matches inputs with users database
         target = db_session.query(User).where(User.username == username and User.password == password).first()
-        print(target)
         if target != None:
             return redirect(url_for("home"))
         else:
@@ -88,6 +87,15 @@ def sign_up():
         db_session.add(user)
         db_session.commit()
         return redirect(url_for("home"))
+
+@app.route("/delete_account", methods=["POST", "GET"])
+def delete_account():
+    name = request.form["target"]
+    target = db_session.query(User).where(User.username == name).first()
+    print(target)
+    db_session.delete(target)
+    db_session.commit()
+    return redirect(url_for("sign_in"))
 
 if __name__ == "__main__":
     init_db()
